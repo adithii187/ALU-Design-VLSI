@@ -8,9 +8,9 @@ This project involves designing and verifying a 4-bit Arithmetic Logic Unit (ALU
 
 ### ALU Block
 
-The ALU block functions as a router to the computational circuit, performing the following operations based on control signals \( S_1 \) and \( S_0 \):
+The ALU block functions as a router to the computational circuit, performing the following operations based on control signals $\( S_1 \)$ and $\( S_0 \)$:
 
-- $\( S_1 S_0 \) Operation$
+- $\( S_1 S_0 \)$ Operation
   - 00: Add
   - 01: Subtract
   - 10: Compare
