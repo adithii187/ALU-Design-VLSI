@@ -1,0 +1,8 @@
+tpd                 =  2.39790e-08 input = A0 output = AmoreB
+tpd                 =  2.39790e-08 input = A1 output = AmoreB
+tpd                 =  2.39790e-08 input = A2 output = AmoreB
+tpd                 =  2.39790e-08 input = A3 output = AmoreB
+tpd                 =  2.32674e-08 input = B0 output = AmoreB
+tpd                 =  2.32674e-08 input = B1 output = AmoreB
+tpd                 =  2.32674e-08 input = B2 output = AmoreB
+tpd                 =  2.32674e-08 input = B3 output = AmoreB

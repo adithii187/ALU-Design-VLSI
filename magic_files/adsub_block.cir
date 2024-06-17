@@ -1,0 +1,148 @@
+* SPICE3 file created from adsub_block.ext - technology: scmos
+.include TSMC_180nm.txt
+.param SUPPLY = 1.8
+.param LAMBDA = 0.18u
+
+.param width_P=8*LAMBDA
+.param  width_N = 4*LAMBDA
+.global gnd vdd
+.option scale=0.09u
+
+Vdd vdd gnd 'SUPPLY'
+
+VM m gnd DC 0
+Va a gnd DC 1.8
+Vb b gnd DC 1.8
+Vcarry carry gnd DC 1.8
+
+M1000 a_n810_n270# a a_n810_n396# Gnd CMOSN w=27 l=18
++  ad=972 pd=126 as=3888 ps=342
+M1001 a_n981_279# b inp Gnd CMOSN w=54 l=18
++  ad=5832 pd=432 as=8748 ps=648
+M1002 a_216_n207# xor1 vdd w_126_n234# CMOSP w=45 l=18
++  ad=4455 pd=378 as=39609 ps=2934
+M1003 carry_out a_n135_n747# vdd w_n216_n648# CMOSP w=45 l=18
++  ad=1620 pd=162 as=0 ps=0
+M1004 vdd xor1 a_711_279# w_936_108# CMOSP w=63 l=18
++  ad=0 pd=0 as=6804 ps=468
+M1005 a_n135_n630# a_n351_n342# vdd w_n216_n648# CMOSP w=45 l=18
++  ad=3240 pd=234 as=0 ps=0
+M1006 xor1 carry sum w_936_108# CMOSP w=63 l=18
++  ad=10206 pd=702 as=6804 ps=468
+M1007 gnd a a_n378_45# Gnd CMOSN w=54 l=18
++  ad=28188 pd=2358 as=2916 ps=216
+M1008 a_n351_n342# a_n810_n270# gnd Gnd CMOSN w=27 l=18
++  ad=1458 pd=162 as=0 ps=0
+M1009 a_n810_n396# inp gnd Gnd CMOSN w=27 l=18
++  ad=0 pd=0 as=0 ps=0
+M1010 a_n171_279# a xor1 Gnd CMOSN w=54 l=18
++  ad=5837 pd=434 as=8748 ps=648
+M1011 a_n135_n747# a_n63_n756# a_n135_n630# w_n216_n648# CMOSP w=45 l=18
++  ad=1215 pd=144 as=0 ps=0
+M1012 vdd a a_n378_45# w_54_108# CMOSP w=63 l=18
++  ad=0 pd=0 as=3402 ps=234
+M1013 gnd carry a_504_45# Gnd CMOSN w=54 l=18
++  ad=0 pd=0 as=2916 ps=216
+M1014 vdd m a_n981_279# w_n756_108# CMOSP w=63 l=18
++  ad=0 pd=0 as=6804 ps=468
+M1015 a_n171_279# a_n378_45# xor1 w_54_108# CMOSP w=63 l=18
++  ad=6804 pd=468 as=0 ps=0
+M1016 gnd inp a_n171_279# Gnd CMOSN w=54 l=17
++  ad=0 pd=0 as=0 ps=0
+M1017 a_n810_n270# a vdd w_n900_n297# CMOSP w=45 l=18
++  ad=4455 pd=378 as=0 ps=0
+M1018 a_n63_n756# a_216_n207# gnd Gnd CMOSN w=27 l=18
++  ad=1458 pd=162 as=0 ps=0
+M1019 a_711_279# carry sum Gnd CMOSN w=54 l=18
++  ad=5832 pd=432 as=5832 ps=432
+M1020 m b inp w_n756_108# CMOSP w=63 l=18
++  ad=3402 pd=234 as=10206 ps=702
+M1021 gnd m a_n981_279# Gnd CMOSN w=54 l=18
++  ad=0 pd=0 as=0 ps=0
+M1022 vdd carry a_504_45# w_936_108# CMOSP w=63 l=18
++  ad=0 pd=0 as=3402 ps=234
+M1023 m a_n1188_45# inp Gnd CMOSN w=54 l=18
++  ad=2916 pd=216 as=0 ps=0
+M1024 a_n351_n342# a_n810_n270# vdd w_n432_n261# CMOSP w=54 l=18
++  ad=2916 pd=216 as=0 ps=0
+M1025 a_216_n207# carry a_216_n333# Gnd CMOSN w=27 l=18
++  ad=972 pd=126 as=3888 ps=342
+M1026 a_711_279# a_504_45# sum w_936_108# CMOSP w=63 l=18
++  ad=0 pd=0 as=0 ps=0
+M1027 a_n810_n270# inp vdd w_n900_n297# CMOSP w=45 l=18
++  ad=0 pd=0 as=0 ps=0
+M1028 a_216_n333# xor1 gnd Gnd CMOSN w=27 l=18
++  ad=0 pd=0 as=0 ps=0
+M1029 carry_out a_n135_n747# gnd Gnd CMOSN w=27 l=18
++  ad=972 pd=126 as=0 ps=0
+M1030 a_n135_n747# a_n351_n342# gnd Gnd CMOSN w=27 l=18
++  ad=1458 pd=216 as=0 ps=0
+M1031 inp a_n378_45# xor1 Gnd CMOSN w=54 l=18
++  ad=0 pd=0 as=0 ps=0
+M1032 a_n63_n756# a_216_n207# vdd w_594_n198# CMOSP w=54 l=18
++  ad=2916 pd=216 as=0 ps=0
+M1033 a_n135_n747# a_n63_n756# gnd Gnd CMOSN w=27 l=18
++  ad=0 pd=0 as=0 ps=0
+M1034 vdd b a_n1188_45# w_n756_108# CMOSP w=63 l=18
++  ad=0 pd=0 as=3402 ps=234
+M1035 vdd inp a_n171_279# w_54_108# CMOSP w=63 l=18
++  ad=0 pd=0 as=0 ps=0
+M1036 gnd xor1 a_711_279# Gnd CMOSN w=54 l=18
++  ad=0 pd=0 as=0 ps=0
+M1037 inp a xor1 w_54_108# CMOSP w=63 l=18
++  ad=0 pd=0 as=0 ps=0
+M1038 a_n981_279# a_n1188_45# inp w_n756_108# CMOSP w=63 l=18
++  ad=0 pd=0 as=0 ps=0
+M1039 gnd b a_n1188_45# Gnd CMOSN w=54 l=18
++  ad=0 pd=0 as=2916 ps=216
+M1040 xor1 a_504_45# sum Gnd CMOSN w=54 l=18
++  ad=0 pd=0 as=0 ps=0
+M1041 a_216_n207# carry vdd w_126_n234# CMOSP w=45 l=18
++  ad=0 pd=0 as=0 ps=0
+C0 w_n756_108# m 2.98fF
+C1 inp w_54_108# 2.98fF
+C2 a_216_n207# w_594_n198# 2.17fF
+C3 w_n216_n648# vdd 2.78fF
+C4 xor1 w_936_108# 2.98fF
+C5 a_n810_n270# w_n432_n261# 2.17fF
+C6 a_n63_n756# w_n216_n648# 3.02fF
+C7 a_n135_n747# Gnd 3.38fF
+C8 a_n63_n756# Gnd 26.35fF
+C9 a_216_n207# Gnd 6.13fF
+C10 a_n351_n342# Gnd 13.17fF
+C11 a_n810_n270# Gnd 6.26fF
+C12 a_711_279# Gnd 10.80fF
+C13 sum Gnd 12.42fF
+C14 carry Gnd 45.50fF
+C15 a_504_45# Gnd 43.33fF
+C16 a_n171_279# Gnd 10.80fF
+C17 xor1 Gnd 63.42fF
+C18 vdd Gnd 40.00fF
+C19 gnd Gnd 59.94fF
+C20 a Gnd 49.44fF
+C21 a_n378_45# Gnd 43.33fF
+C22 a_n981_279# Gnd 11.04fF
+C23 inp Gnd 67.00fF
+C24 b Gnd 24.85fF
+C25 m Gnd 18.03fF
+C26 a_n1188_45# Gnd 43.58fF
+C27 w_n216_n648# Gnd 41.25fF
+C28 w_126_n234# Gnd 29.29fF
+C29 w_n900_n297# Gnd 29.29fF
+C30 w_n432_n261# Gnd 28.07fF
+C31 w_594_n198# Gnd 28.07fF
+C32 w_936_108# Gnd 73.22fF
+C33 w_54_108# Gnd 73.22fF
+C34 w_n756_108# Gnd 73.22fF
+
+
+.tran 0.1n 800n
+
+.control
+run 
+plot v(a) v(b)+2 v(carry)+4 v(m)+6
+plot v(sum) v(carry_out)+2
+plot v(inp)
+plot v(xor1)
+.endc
+.endc

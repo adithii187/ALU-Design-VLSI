@@ -1,0 +1,8 @@
+tpd                 =  2.41307e-08 input = A0 output = AlessB
+tpd                 =  2.41307e-08 input = A1 output = AlessB
+tpd                 =  2.41307e-08 input = A2 output = AlessB
+tpd                 =  2.41307e-08 input = A3 output = AlessB
+tpd                 =  2.58454e-08 input = B0 output = AlessB
+tpd                 =  2.58454e-08 input = B1 output = AlessB
+tpd                 =  2.58454e-08 input = B2 output = AlessB
+tpd                 =  2.58454e-08 input = B3 output = AlessB

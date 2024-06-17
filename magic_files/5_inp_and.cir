@@ -1,0 +1,63 @@
+* SPICE3 file created from 5_inp_and.ext - technology: scmos
+.include TSMC_180nm.txt
+
+.param SUPPLY = 1.8
+.param LAMBDA = 0.09u
+
+.param width_P=8*LAMBDA
+.param  width_N = 4*LAMBDA
+.global gnd vdd
+.option scale=0.01u
+
+Vdd vdd gnd 'SUPPLY'
+
+VA a gnd PULSE(0 1.8 1000ns 100ps 100ps 800ns 800ns)
+VB b gnd PULSE(0 1.8 800ns 100ps 100ps 400ns 600ns)
+VC c gnd PULSE(0 1.8 600ns 100ps 100ps 200ns 400ns)
+* VD d gnd PULSE(0 1.8 400ns 100ps 100ps 200ns 400ns)
+VD d gnd PULSE(0 1.8 200ns 100ps 100ps 200ns 400ns)
+VE e gnd PULSE(0 1.8 200ns 100ps 100ps 200ns 400ns)
+
+M1000 a_n45_n18# d vdd w_n153_n36# CMOSP w=54 l=18
++  ad=17496 pd=1188 as=16038 ps=1242
+M1001 a_n45_n18# c vdd w_n153_n36# CMOSP w=54 l=18
++  ad=0 pd=0 as=0 ps=0
+M1002 a_225_n171# c a_81_n171# Gnd CMOSN w=27 l=18
++  ad=2916 pd=270 as=3402 ps=306
+M1003 a_n45_n18# b vdd w_n153_n36# CMOSP w=54 l=18
++  ad=0 pd=0 as=0 ps=0
+M1004 a_n45_n18# e a_351_n171# Gnd CMOSN w=27 l=18
++  ad=3645 pd=324 as=3159 ps=288
+M1005 a_n45_n18# e vdd w_n153_n36# CMOSP w=54 l=18
++  ad=0 pd=0 as=0 ps=0
+M1006 a_81_n171# b a_n45_n171# Gnd CMOSN w=27 l=18
++  ad=0 pd=0 as=2916 ps=270
+M1007 out a_n45_n18# vdd w_n153_n36# CMOSP w=54 l=18
++  ad=2430 pd=198 as=0 ps=0
+M1008 a_n45_n18# a vdd w_n153_n36# CMOSP w=54 l=18
++  ad=0 pd=0 as=0 ps=0
+M1009 a_351_n171# d a_225_n171# Gnd CMOSN w=27 l=18
++  ad=0 pd=0 as=0 ps=0
+M1010 out a_n45_n18# gnd Gnd CMOSN w=27 l=18
++  ad=1215 pd=144 as=2673 ps=306
+M1011 a_n45_n171# a gnd Gnd CMOSN w=27 l=18
++  ad=0 pd=0 as=0 ps=0
+C0 vdd w_n153_n36# 10.89fF
+C1 gnd Gnd 9.63fF
+C2 a_n45_n18# Gnd 11.33fF
+C3 e Gnd 2.93fF
+C4 d Gnd 2.93fF
+C5 c Gnd 2.93fF
+C6 b Gnd 2.93fF
+C7 a Gnd 3.16fF
+C8 w_n153_n36# Gnd 161.09fF
+
+.tran 0.1n 3200n
+
+.control
+run 
+plot v(a) v(b)+2 v(c)+4 v(d)+6 v(e)+8 v(out)+10
+* quit
+.endc
+
+.endc

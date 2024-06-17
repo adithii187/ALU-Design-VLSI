@@ -1,0 +1,54 @@
+* SPICE3 file created from xnor.ext - technology: scmos
+.include TSMC_180nm.txt
+.param SUPPLY = 1.8
+.param LAMBDA = 0.18u
+
+.param width_P=8*LAMBDA
+.param  width_N = 4*LAMBDA
+.global gnd vdd
+.option scale=0.81u
+
+Vdd vdd gnd 'SUPPLY'
+
+VB b gnd PULSE(0 1.8 200ns 100ps 100ps 200ns 400ns)
+VA a gnd PULSE(0 1.8 100ns 100ps 100ps 100ns 200ns)
+
+M1000 gnd a a_n77_29# Gnd CMOSN w=6 l=2
++  ad=102 pd=70 as=72 ps=48
+M1001 gnd b a_n100_3# Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=36 ps=24
+M1002 out a_n77_51# gnd Gnd CMOSN w=3 l=2
++  ad=18 pd=18 as=0 ps=0
+M1003 out a_n77_51# vdd w_n13_77# CMOSP w=6 l=2
++  ad=36 pd=24 as=128 ps=78
+M1004 a b a_n77_51# w_n52_10# CMOSP w=7 l=2
++  ad=42 pd=26 as=84 ps=52
+M1005 a a_n100_3# a_n77_51# Gnd CMOSN w=6 l=2
++  ad=36 pd=24 as=72 ps=48
+M1006 a_n77_29# a_n100_3# a_n77_51# w_n52_10# CMOSP w=7 l=2
++  ad=84 pd=52 as=0 ps=0
+M1007 a_n77_29# b a_n77_51# Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1008 vdd a a_n77_29# w_n52_10# CMOSP w=7 l=2
++  ad=0 pd=0 as=0 ps=0
+M1009 vdd b a_n100_3# w_n52_10# CMOSP w=7 l=2
++  ad=0 pd=0 as=42 ps=26
+C0 w_n52_10# a 2.98fF
+C1 gnd Gnd 18.60fF
+C2 vdd Gnd 8.79fF
+C3 a_n77_29# Gnd 11.04fF
+C4 a_n77_51# Gnd 16.56fF
+C5 b Gnd 24.85fF
+C6 a Gnd 17.91fF
+C7 a_n100_3# Gnd 43.58fF
+C8 w_n13_77# Gnd 26.36fF
+C9 w_n52_10# Gnd 73.22fF
+
+
+.tran 0.1n 800n
+
+.control
+run 
+plot v(a) v(b)+2 v(out)+4
+.endc
+.end

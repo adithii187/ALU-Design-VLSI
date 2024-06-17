@@ -1,0 +1,8 @@
+tpd                 =  2.90845e-08 input = A0 output = AequalsB
+tpd                 =  2.90845e-08 input = A1 output = AequalsB
+tpd                 =  2.90845e-08 input = A2 output = AequalsB
+tpd                 =  2.90845e-08 input = A3 output = AequalsB
+tpd                 =  2.50111e-08 input = B0 output = AequalsB
+tpd                 =  2.50111e-08 input = B1 output = AequalsB
+tpd                 =  2.50111e-08 input = B2 output = AequalsB
+tpd                 =  2.50111e-08 input = B3 output = AequalsB

@@ -1,0 +1,49 @@
+* SPICE3 file created from 2inp_and.ext - technology: scmos
+.include TSMC_180nm.txt
+.param SUPPLY = 1.8
+.param LAMBDA = 0.18u
+
+.param width_P=8*LAMBDA
+.param  width_N = 4*LAMBDA
+.global gnd vdd
+.option scale=0.09u
+
+Vdd vdd gnd 'SUPPLY'
+
+VB b gnd PULSE(0 1.8 200ns 100ps 100ps 200ns 400ns)
+VA a gnd PULSE(0 1.8 100ns 100ps 100ps 100ns 200ns)
+
+* VB b gnd DC 1.8
+* VA a gnd DC 1.8
+
+* SPICE3 file created from 2inp_and.ext - technology: scmos
+
+
+M1000 a_n8_n11# a gnd Gnd CMOSN w=3 l=2
++  ad=48 pd=38 as=30 ps=32
+M1001 a_n8_3# a vdd w_n18_0# CMOSP w=5 l=2
++  ad=55 pd=42 as=75 ps=60
+M1002 a_n8_3# b vdd w_n18_0# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1003 out a_n8_3# gnd Gnd CMOSN w=3 l=2
++  ad=18 pd=18 as=0 ps=0
+M1004 out a_n8_3# vdd w_34_4# CMOSP w=6 l=2
++  ad=36 pd=24 as=0 ps=0
+M1005 a_n8_3# b a_n8_n11# Gnd CMOSN w=3 l=2
++  ad=12 pd=14 as=0 ps=0
+C0 w_34_4# a_n8_3# 2.17fF
+C1 gnd Gnd 5.14fF
+C2 vdd Gnd 3.65fF
+C3 a_n8_3# Gnd 6.54fF
+C4 w_n18_0# Gnd 29.29fF
+C5 w_34_4# Gnd 28.07fF
+
+
+
+.tran 0.1n 800n
+
+.control
+run 
+plot v(a) v(b)+2 v(out)+4
+.endc
+.endc

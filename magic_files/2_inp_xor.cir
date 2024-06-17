@@ -1,0 +1,49 @@
+* SPICE3 file created from 2_inp_xor.ext - technology: scmos
+.include TSMC_180nm.txt
+.param SUPPLY = 1.8
+.param LAMBDA = 0.18u
+
+.param width_P=8*LAMBDA
+.param  width_N = 4*LAMBDA
+.global gnd vdd
+.option scale=0.01u
+
+Vdd vdd gnd 'SUPPLY'
+
+VB vb gnd PULSE(0 1.8 200ns 100ps 100ps 200ns 400ns)
+VA va gnd PULSE(0 1.8 100ns 100ps 100ps 100ns 200ns)
+
+M1000 vout vb vab Gnd CMOSN w=486 l=162
++  ad=472392 pd=3888 as=472392 ps=3888
+M1001 vbb vb vdd w_n171_9# CMOSP w=567 l=162
++  ad=275562 pd=2106 as=642978 ps=4536
+M1002 vab va gnd Gnd CMOSN w=486 l=162
++  ad=0 pd=0 as=551124 ps=4212
+M1003 vout vb va w_n171_9# CMOSP w=567 l=162
++  ad=551124 pd=4212 as=275562 ps=2106
+M1004 vbb vb gnd Gnd CMOSN w=486 l=162
++  ad=236196 pd=1944 as=0 ps=0
+M1005 vab va vdd w_n171_9# CMOSP w=567 l=162
++  ad=551124 pd=4212 as=0 ps=0
+M1006 vout vbb vab w_n171_9# CMOSP w=567 l=162
++  ad=0 pd=0 as=0 ps=0
+M1007 vout vbb va Gnd CMOSN w=486 l=162
++  ad=0 pd=0 as=236196 ps=1944
+C0 w_n171_9# va 2.98fF
+C1 gnd Gnd 4.00fF
+C2 vab Gnd 11.04fF
+C3 vout Gnd 8.55fF
+C4 va Gnd 18.27fF
+C5 vb Gnd 24.85fF
+C6 vdd Gnd 3.03fF
+C7 vbb Gnd 43.58fF
+C8 w_n171_9# Gnd 73.22fF
+
+
+.tran 0.1n 3200n
+
+.control
+run 
+plot v(va) v(vb)+2 v(vout)+4
+.endc
+.endc

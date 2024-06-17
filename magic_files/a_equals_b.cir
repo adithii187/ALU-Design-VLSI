@@ -1,0 +1,150 @@
+* SPICE3 file created from a_equals_b.ext - technology: scmos
+.include TSMC_180nm.txt
+.param SUPPLY = 1.8
+.param LAMBDA = 0.18u
+
+.param width_P=8*LAMBDA
+.param  width_N = 4*LAMBDA
+.global gnd vdd
+.option scale=0.81u
+
+
+Vdd vdd gnd 'SUPPLY'
+
+V_in_a3 a3 gnd 0
+V_in_a2 a2 gnd 1.8
+V_in_a1 a1 gnd 1.8
+V_in_a0 a0 gnd 1.8
+
+V_in_b3 b3 gnd 1.8
+V_in_b2 b2 gnd 1.8
+V_in_b1 b1 gnd 1.8
+V_in_b0 b0 gnd 0
+
+M1000 b1 a_n140_n210# a_n117_n162# Gnd CMOSN w=6 l=2
++  ad=36 pd=24 as=72 ps=48
+M1001 b0 a0 a_n117_n306# w_n92_n347# CMOSP w=7 l=2
++  ad=42 pd=26 as=84 ps=52
+M1002 gnd a0 a_n140_n354# Gnd CMOSN w=6 l=2
++  ad=408 pd=280 as=36 ps=24
+M1003 x3 a_n117_56# gnd Gnd CMOSN w=3 l=2
++  ad=18 pd=18 as=0 ps=0
+M1004 vdd b3 a_n117_34# w_n92_15# CMOSP w=7 l=2
++  ad=512 pd=312 as=84 ps=52
+M1005 vdd a3 a_n140_8# w_n92_15# CMOSP w=7 l=2
++  ad=0 pd=0 as=42 ps=26
+M1006 vdd b2 a_n117_n71# w_n92_n90# CMOSP w=7 l=2
++  ad=0 pd=0 as=84 ps=52
+M1007 vdd a2 a_n140_n97# w_n92_n90# CMOSP w=7 l=2
++  ad=0 pd=0 as=42 ps=26
+M1008 b3 a_n140_8# a_n117_56# Gnd CMOSN w=6 l=2
++  ad=36 pd=24 as=72 ps=48
+M1009 x3 a_n117_56# vdd w_n53_82# CMOSP w=6 l=2
++  ad=36 pd=24 as=0 ps=0
+M1010 a_n117_n71# a2 a_n117_n49# Gnd CMOSN w=6 l=2
++  ad=72 pd=48 as=72 ps=48
+M1011 vdd a1 a_n140_n210# w_n92_n203# CMOSP w=7 l=2
++  ad=0 pd=0 as=42 ps=26
+M1012 a_n117_n328# a0 a_n117_n306# Gnd CMOSN w=6 l=2
++  ad=72 pd=48 as=72 ps=48
+M1013 vdd b1 a_n117_n184# w_n92_n203# CMOSP w=7 l=2
++  ad=0 pd=0 as=84 ps=52
+M1014 x2 a_n117_n49# gnd Gnd CMOSN w=3 l=2
++  ad=18 pd=18 as=0 ps=0
+M1015 b0 a_n140_n354# a_n117_n306# Gnd CMOSN w=6 l=2
++  ad=36 pd=24 as=0 ps=0
+M1016 a_n117_n71# a_n140_n97# a_n117_n49# w_n92_n90# CMOSP w=7 l=2
++  ad=0 pd=0 as=84 ps=52
+M1017 x1 a_n117_n162# gnd Gnd CMOSN w=3 l=2
++  ad=18 pd=18 as=0 ps=0
+M1018 a_n117_n184# a_n140_n210# a_n117_n162# w_n92_n203# CMOSP w=7 l=2
++  ad=0 pd=0 as=84 ps=52
+M1019 gnd b1 a_n117_n184# Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=72 ps=48
+M1020 gnd a1 a_n140_n210# Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=36 ps=24
+M1021 a_n117_34# a3 a_n117_56# Gnd CMOSN w=6 l=2
++  ad=72 pd=48 as=0 ps=0
+M1022 b2 a_n140_n97# a_n117_n49# Gnd CMOSN w=6 l=2
++  ad=36 pd=24 as=0 ps=0
+M1023 b3 a3 a_n117_56# w_n92_15# CMOSP w=7 l=2
++  ad=42 pd=26 as=84 ps=52
+M1024 vdd b0 a_n117_n328# w_n92_n347# CMOSP w=7 l=2
++  ad=0 pd=0 as=84 ps=52
+M1025 x2 a_n117_n49# vdd w_n53_n23# CMOSP w=6 l=2
++  ad=36 pd=24 as=0 ps=0
+M1026 x1 a_n117_n162# vdd w_n53_n280# CMOSP w=6 l=2
++  ad=36 pd=24 as=0 ps=0
+M1027 b2 a2 a_n117_n49# w_n92_n90# CMOSP w=7 l=2
++  ad=42 pd=26 as=0 ps=0
+M1028 x0 a_n117_n306# gnd Gnd CMOSN w=3 l=2
++  ad=18 pd=18 as=0 ps=0
+M1029 gnd b3 a_n117_34# Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1030 a_n117_n184# a1 a_n117_n162# Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1031 gnd a3 a_n140_8# Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=36 ps=24
+M1032 b1 a1 a_n117_n162# w_n92_n203# CMOSP w=7 l=2
++  ad=42 pd=26 as=0 ps=0
+M1033 gnd b0 a_n117_n328# Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1034 vdd a0 a_n140_n354# w_n92_n347# CMOSP w=7 l=2
++  ad=0 pd=0 as=42 ps=26
+M1035 a_n117_34# a_n140_8# a_n117_56# w_n92_15# CMOSP w=7 l=2
++  ad=0 pd=0 as=0 ps=0
+M1036 x0 a_n117_n306# vdd w_n53_n280# CMOSP w=6 l=2
++  ad=36 pd=24 as=0 ps=0
+M1037 a_n117_n328# a_n140_n354# a_n117_n306# w_n92_n347# CMOSP w=7 l=2
++  ad=0 pd=0 as=0 ps=0
+M1038 gnd b2 a_n117_n71# Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1039 gnd a2 a_n140_n97# Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=36 ps=24
+C0 w_n92_n203# b1 2.98fF
+C1 w_n53_82# vdd 2.23fF
+C2 w_n92_n347# b0 2.98fF
+C3 w_n92_n90# b2 2.98fF
+C4 w_n53_n23# vdd 2.02fF
+C5 w_n53_n280# vdd 17.45fF
+C6 w_n92_15# b3 2.98fF
+C7 a_n117_n328# Gnd 11.04fF
+C8 a_n117_n306# Gnd 16.56fF
+C9 a0 Gnd 24.85fF
+C10 b0 Gnd 17.91fF
+C11 a_n140_n354# Gnd 43.58fF
+C12 a_n117_n184# Gnd 11.04fF
+C13 a_n117_n162# Gnd 16.56fF
+C14 a1 Gnd 24.85fF
+C15 b1 Gnd 17.91fF
+C16 a_n140_n210# Gnd 43.58fF
+C17 a_n117_n71# Gnd 11.04fF
+C18 a_n117_n49# Gnd 16.56fF
+C19 a2 Gnd 24.85fF
+C20 b2 Gnd 17.91fF
+C21 a_n140_n97# Gnd 43.58fF
+C22 gnd Gnd 91.87fF
+C23 vdd Gnd 47.26fF
+C24 a_n117_34# Gnd 11.04fF
+C25 a_n117_56# Gnd 16.56fF
+C26 a3 Gnd 24.85fF
+C27 b3 Gnd 17.91fF
+C28 a_n140_8# Gnd 43.58fF
+C29 w_n92_n347# Gnd 73.22fF
+C30 w_n53_n280# Gnd 95.35fF
+C31 w_n92_n203# Gnd 73.22fF
+C32 w_n53_n23# Gnd 26.36fF
+C33 w_n92_n90# Gnd 73.22fF
+C34 w_n53_82# Gnd 27.01fF
+C35 w_n92_15# Gnd 73.22fF
+
+.tran 0.1n 800n
+
+.control
+run 
+
+plot v(a3)+8 v(a2)+6 v(a1)+4 v(a0)+2
+plot v(b3)+8 v(b2)+6 v(b1)+4 v(b0)+2
+plot v(x3)+8 v(x2)+6 v(x1)+4 v(x0)+2
+.endc
+.endc
