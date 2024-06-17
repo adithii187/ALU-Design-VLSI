@@ -33,11 +33,11 @@ The Comparator block compares the 4-bit numbers $\( A_3A_2A_1A_0 \)$ and $\( B_3
 ### AND Block
 
 The AND Block performs the following AND operations:
-- $\ A_3\ \&  $\ B_3 \
-- $\ A_2\ \&  $\ B_2 \
-- $\ A_1\ \&  $\ B_1 \
-- $\ A_0\ \&  $\ B_0 \
-
+- \( A_3 \& B_3 \)
+- \( A_2 \& B_2 \)
+- \( A_1 \& B_1 \)
+- \( A_0 \& B_0 \)
+- 
 ### Overall ALU Design
 
 Combining all these blocks results in a complete 4-bit ALU capable of performing the specified operations.
