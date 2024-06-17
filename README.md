@@ -10,7 +10,7 @@ This project involves designing and verifying a 4-bit Arithmetic Logic Unit (ALU
 
 The ALU block functions as a router to the computational circuit, performing the following operations based on control signals \( S_1 \) and \( S_0 \):
 
-- **\( S_1 S_0 \) Operation**
+- $\( S_1 S_0 \) Operation$
   - 00: Add
   - 01: Subtract
   - 10: Compare
@@ -20,23 +20,23 @@ To implement this, a 2-to-4 decoder will be used.
 
 ### Enable Block
 
-The Enable Block consists of 8 AND gates responsible for routing the input values \( A_3A_2A_1A_0 \) and \( B_3B_2B_1B_0 \) to their respective operation blocks based on the operation control signal.
+The Enable Block consists of 8 AND gates responsible for routing the input values $\( A_3A_2A_1A_0 \)$ and $\( B_3B_2B_1B_0 \)$ to their respective operation blocks based on the operation control signal.
 
 ### Adder/Subtractor
 
-A single block will act as both an adder and subtractor. The adder operation is \( A_3A_2A_1A_0 + B_3B_2B_1B_0 \), and the subtractor operation is \( A_3A_2A_1A_0 - B_3B_2B_1B_0 \).
+A single block will act as both an adder and subtractor. The adder operation is $\( A_3A_2A_1A_0 + B_3B_2B_1B_0 \)$, and the subtractor operation is $\( A_3A_2A_1A_0 - B_3B_2B_1B_0 \)$.
 
 ### Comparator
 
-The Comparator block compares the 4-bit numbers \( A_3A_2A_1A_0 \) and \( B_3B_2B_1B_0 \) to determine if \( A \) is greater than, less than, or equal to \( B \).
+The Comparator block compares the 4-bit numbers $\( A_3A_2A_1A_0 \)$ and $\( B_3B_2B_1B_0 \)$ to determine if $\( A \)$ is greater than, less than, or equal to $\( B \)$.
 
 ### AND Block
 
 The AND Block performs the following AND operations:
-- \( A_3 \& B_3 \)
-- \( A_2 \& B_2 \)
-- \( A_1 \& B_1 \)
-- \( A_0 \& B_0 \)
+- $\( A_3 \& B_3 \)$
+- $\( A_2 \& B_2 \)$
+- $\( A_1 \& B_1 \)$
+- $\( A_0 \& B_0 \)$
 
 ### Overall ALU Design
 
